@@ -1,6 +1,6 @@
-package com.yuhongyu.demo.controller;
+package com.customer.demo.controller;
 
-import com.yuhongyu.demo.service.HelloService;
+import com.customer.demo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

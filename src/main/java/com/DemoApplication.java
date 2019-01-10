@@ -1,4 +1,4 @@
-package com.yuhongyu.demo;
+package com.customer.demo;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;

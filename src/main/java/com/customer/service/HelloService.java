@@ -1,6 +1,6 @@
-package com.yuhongyu.demo.service;
+package com.customer.demo.service;
 
-import com.yuhongyu.demo.dto.HelloDto;
+import com.customer.demo.dto.HelloDto;
 import org.springframework.stereotype.Service;
 
 /**
