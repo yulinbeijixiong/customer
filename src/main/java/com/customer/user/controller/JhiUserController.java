@@ -8,11 +8,7 @@ import com.customer.user.service.impl.JhiUserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.sql.Wrapper;
@@ -32,20 +28,18 @@ import java.util.Map;
  * @since 2019-01-10
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping("/user")
 public class JhiUserController {
     @Autowired
     public IJhiUserService iJhiUserService;
     @RequestMapping(method = RequestMethod.GET,
-            path = "",
+            path = "/get",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public Map<String, String> index() {
+    public Map<String, String> index(@RequestBody Map map) {
         HashMap<String, Object> objectObjectHashMap = new HashMap<>();
-        objectObjectHashMap.put("id",2);
+        objectObjectHashMap.put("last_name","迎烁");
         List<JhiUser> list = (List<JhiUser>) iJhiUserService.listByMap(objectObjectHashMap);
-
-
         return Collections.singletonMap("msg",list.toString());
     }
     @RequestMapping(method = RequestMethod.GET,
