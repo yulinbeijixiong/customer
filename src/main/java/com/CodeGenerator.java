@@ -1,3 +1,4 @@
+package com;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
@@ -50,10 +51,10 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://192.168.2.11:3306/chinamall_multisite?useUnicode=true&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://192.168.2.88:3306/db1?useUnicode=true&characterEncoding=utf8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("erp");
+        dsc.setUsername("root");
         dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
@@ -93,11 +94,6 @@ public class CodeGenerator {
 
         // 配置模板
         TemplateConfig templateConfig = new TemplateConfig();
-
-        // 配置自定义输出模板
-        // templateConfig.setEntity();
-        // templateConfig.setService();
-        // templateConfig.setController();
 
         templateConfig.setXml(null);
         mpg.setTemplate(templateConfig);

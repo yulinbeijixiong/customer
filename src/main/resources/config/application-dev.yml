@@ -5,9 +5,9 @@ spring:
     name: demo
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.2.11:3306/chinamall_multisite?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://192.168.2.88:3306/db1?useUnicode=true&characterEncoding=utf8
     name:
-    username: erp
+    username: root
     password: 123456
 server:
   port: 10070

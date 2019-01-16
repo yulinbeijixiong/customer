@@ -1,4 +1,4 @@
-package com.customer.demo;
+package com;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
@@ -12,7 +12,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @SpringBootApplication
-@MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")
+@MapperScan("com.customer.*.mapper")
 public class DemoApplication {
     private static final Logger LOGGER= LoggerFactory.getLogger(DemoApplication.class);
 
