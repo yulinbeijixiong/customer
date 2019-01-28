@@ -13,7 +13,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 @EnableSwagger2
 @SpringBootApplication
-@MapperScan("com.customer.*.mapper")
+@MapperScan("com.customer.**.mapper")
 public class DemoApplication {
     private static final Logger LOGGER= LoggerFactory.getLogger(DemoApplication.class);
 
